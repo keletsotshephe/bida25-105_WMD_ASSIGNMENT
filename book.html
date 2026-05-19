@@ -23,13 +23,17 @@
 
 <section style="width:90%; margin:auto; text-align:center;">
 
-    <h2 style="margin:40px 0;">Book Your Stay</h2>
+    <h2 class="booking-title">Book Your Stay</h2>
 
-    <form style="width:40%; margin:auto; border:2px solid black; padding:30px; background:white;">
+    <form class="booking-form">
 
-        <input type="text" placeholder="Names" required><br><br>
+        <label>Full Name</label>
 
-        <input type="email" placeholder="Email" required><br><br>
+        <input type="text" placeholder="Enter your name" required><br><br>
+
+        <label>Email Address</label>
+
+        <input type="email" placeholder="Enter your email" required><br><br>
 
         <select required>
             <option>Room Type</option>
@@ -38,7 +42,7 @@
             <option>Family Suite</option>
         </select><br><br>
 
-        <input type="date" required><br><br>
+        <input type="date" required>
 
         <button type="submit">Confirm Booking</button>
 
