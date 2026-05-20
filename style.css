@@ -15,8 +15,6 @@ body{
     color: #333;
 }
 
-/* HEADER */
-
 header{
 
     width: 95%;
@@ -75,8 +73,6 @@ nav a:hover{
     color: #c59d5f;
 }
 
-/* HERO */
-
 .hero{
 
     width: 95%;
@@ -85,7 +81,7 @@ nav a:hover{
 
     margin: 40px auto;
 
-    background-image: url('hotel.jpg');
+    background-image: url('home.jpg');
 
     background-size: cover;
 
@@ -128,8 +124,6 @@ nav a:hover{
     z-index: 1;
 }
 
-/* TITLES */
-
 .section-title{
 
     text-align: center;
@@ -140,8 +134,6 @@ nav a:hover{
 
     color: #4b3621;
 }
-
-/* ROOMS */
 
 .rooms-section{
 
@@ -202,8 +194,6 @@ nav a:hover{
     color: #666;
 }
 
-/* ABOUT */
-
 .about-section{
 
     width: 95%;
@@ -252,8 +242,6 @@ nav a:hover{
 
     font-size: 18px;
 }
-
-/* BOOKING */
 
 .booking-section{
 
@@ -316,8 +304,6 @@ textarea:focus{
     border: 2px solid #c59d5f;
 }
 
-/* BUTTONS */
-
 button{
 
     width: 100%;
@@ -346,8 +332,6 @@ button:hover{
     background: linear-gradient(to right, #4b3621, #2f1e12);
 }
 
-/* CONTACT */
-
 .contact-section{
 
     width: 95%;
@@ -372,8 +356,6 @@ button:hover{
     font-size: 20px;
 }
 
-/* FEEDBACK */
-
 .feedback-section{
 
     width: 95%;
@@ -388,8 +370,6 @@ button:hover{
 
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-
-/* FOOTER */
 
 footer{
 
@@ -407,8 +387,6 @@ footer{
 
     border-radius: 20px;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:768px){
 
