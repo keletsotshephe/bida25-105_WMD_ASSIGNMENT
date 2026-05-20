@@ -2,154 +2,221 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, #f7f7f7, #ececec);
-    color: #61999f;
+    background: linear-gradient(to right, #f8f4ee, #efe5d8);
+    color: #333;
 }
 
+/* HEADER */
+
 header{
-    width: 90%;
+
+    width: 95%;
 
     margin: 20px auto;
 
-    padding: 25px 50px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
+    padding: 20px 50px;
 
     background-color: #4b3621;
 
     border-radius: 20px;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
 }
 
 .logo img{
-    width: 70px;
-    height: 70px;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #c59d5f;
 }
 
 nav a{
-      text-decoration: none;
+
+    text-decoration: none;
 
     color: white;
 
     margin-left: 25px;
 
+    font-size: 20px;
+
     font-weight: bold;
-
-    font-size: 18px;
-
-    transition: 0.3s;
 }
 
 nav a:hover{
-    color: darkorange;
+
+    color: #c59d5f;
 }
 
+/* HERO */
+
 .hero{
-    width: 90%;
-    height: 300px;
-    margin: auto;
-    border: 2px solid black;
-    background-image: url('home.jpg');
+
+    width: 95%;
+
+    height: 500px;
+
+    margin: 40px auto;
+
+    background-image: url('hotel.jpg');
+
     background-size: cover;
+
     background-position: center;
+
+    border-radius: 25px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
+    position: relative;
+}
+
+.hero::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,0.4);
+
+    border-radius: 25px;
 }
 
 .hero h1{
-    background-color: rgba(0,0,0,0.5);
+
+    position: relative;
+
     color: white;
-    padding: 15px;
-    border-radius: 5px;
+
+    font-size: 60px;
+
+    z-index: 1;
 }
 
-.rooms-preview{
-    width: 90%;
-    margin: 40px auto;
+/* TITLES */
+
+.section-title{
+
+    text-align: center;
+
+    font-size: 50px;
+
+    margin-bottom: 40px;
+
+    color: #4b3621;
+}
+
+/* ROOMS */
+
+.rooms-section{
+
+    width: 95%;
+
+    margin: 80px auto;
+}
+
+.rooms-container{
+
     display: flex;
+
     justify-content: space-between;
-    gap: 20px;
+
+    gap: 30px;
 }
 
 .room-card{
-    background-color: white;
-    border: 2px solid black;
-    width: 30%;
-    padding: 10px;
-    text-align: center;
+
+    flex: 1;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    border-top: 6px solid #c59d5f;
 }
 
 .room-card:hover{
 
-    transform: translateY(-10px);
-
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-
-    cursor: pointer;
-
+    transform: translateY(-10px) scale(1.03);
 }
 
 .room-card img{
+
     width: 100%;
-    height: 180px;
+
+    height: 250px;
+
     object-fit: cover;
 }
 
-.room-card h3{
-    margin-top: 10px;
+.room-card h2{
+
+    padding: 20px;
+
+    color: #4b3621;
 }
 
 .room-card p{
-    margin-top: 5px;
+
+    padding: 0 20px 20px;
+
+    color: #666;
 }
 
-footer{
-      width: 90%;
-
-    margin: 40px auto;
-
-    padding: 50px;
-
-    background-color: #222;
-
-    color: white;
-
-    text-align: center;
-
-    border-radius: 25px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-footer p{
-    color: #c59d5f;
-
-    font-size: 22px;
-}
+/* ABOUT */
 
 .about-section{
-    width: 90%;
 
-    margin: 70px auto;
+    width: 95%;
+
+    margin: 80px auto;
 
     display: flex;
-
-    justify-content: space-between;
 
     gap: 40px;
 }
 
 .about-card{
+
     flex: 1;
 
     background: white;
@@ -160,80 +227,39 @@ footer p{
 
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 
-    transition: 0.3s;
-
     border-top: 6px solid #c59d5f;
 }
 
 .about-card:hover{
-    transform: translateY(-10px);
 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
 }
 
 .about-card h2{
+
     color: #4b3621;
 
-    font-size: 40px;
-
     margin-bottom: 20px;
+
+    font-size: 35px;
 }
 
 .about-card p{
-    color: #666;
 
     line-height: 1.8;
 
-    font-size: 20px;
+    color: #666;
+
+    font-size: 18px;
 }
 
-@media(max-width:768px){
-
-    .about-section{
-        flex-direction: column;
-    }
-
-    .about-card{
-        width: 100%;
-    }
-
-    nav{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a{
-        margin: 10px;
-    }
-
-    header{
-        flex-direction: column;
-    }
-}
-
-.booking-title{
-
-    text-align: center;
-
-    font-size: 60px;
-
-    color: #4b3621;
-
-    margin-top: 50px;
-
-    margin-bottom: 40px;
-
-    letter-spacing: 2px;
-}
+/* BOOKING */
 
 .booking-section{
 
     display: flex;
 
     justify-content: center;
-
-    align-items: center;
 
     margin-bottom: 80px;
 }
@@ -242,16 +268,55 @@ footer p{
 
     width: 450px;
 
-    background-color: white;
+    background: white;
 
     padding: 50px;
 
     border-radius: 25px;
 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 
-    border-top: 8px solid #c59d5f;
+    border-top: 6px solid #c59d5f;
 }
+
+label{
+
+    font-weight: bold;
+
+    color: #4b3621;
+}
+
+input,
+select,
+textarea{
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background-color: #fffaf5;
+
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline: none;
+
+    border: 2px solid #c59d5f;
+}
+
+/* BUTTONS */
 
 button{
 
@@ -265,15 +330,13 @@ button{
 
     border: none;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     font-size: 18px;
 
     font-weight: bold;
 
     cursor: pointer;
-
-    transition: 0.3s;
 }
 
 button:hover{
@@ -281,138 +344,106 @@ button:hover{
     transform: translateY(-5px);
 
     background: linear-gradient(to right, #4b3621, #2f1e12);
-
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* NAVBAR */
-.navbar{
-    padding:20px 10%;
-    background: linear-gradient(to right,#6b3f1d,#a66a3f);
-    border-radius:20px;
-    margin:20px;
-}
- 
-.nav-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
- 
-/* LOGO */
-.logo img{
-    width:60px;
-    height:60px;
-    object-fit:cover;
-}
- 
-/* MENU */
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:40px;
-}
- 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    font-size:18px;
-    transition:0.3s;
-}
- 
-.nav-links a:hover{
-    color:#FFD700;
-}
- 
-/* CONTACT SECTION */
+/* CONTACT */
+
 .contact-section{
-    background:#f4f4f4;
-    padding:80px 10%;
-    font-family: Arial, Helvetica, sans-serif;
+
+    width: 95%;
+
+    margin: 80px auto;
+
+    text-align: center;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
- 
-.contact-container{
-    display:flex;
-    justify-content:space-between;
-    gap:50px;
-    flex-wrap:wrap;
+
+.contact-section p{
+
+    margin-top: 15px;
+
+    font-size: 20px;
 }
- 
-/* LEFT SIDE */
-.contact-info{
-    flex:1;
-    min-width:280px;
+
+/* FEEDBACK */
+
+.feedback-section{
+
+    width: 95%;
+
+    margin: 80px auto;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
- 
-.contact-info h2{
-    font-size:28px;
-    margin-bottom:20px;
+
+/* FOOTER */
+
+footer{
+
+    width: 95%;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    background: #222;
+
+    color: #c59d5f;
+
+    text-align: center;
+
+    border-radius: 20px;
 }
- 
-.contact-info p{
-    margin:15px 0;
-    font-size:16px;
-    color:#444;
-}
- 
-.contact-info i{
-    color:#d4af37;
-    margin-right:10px;
-}
- 
-.contact-info h3{
-    margin-top:30px;
-}
- 
-.social-icons i{
-    font-size:18px;
-    margin-right:15px;
-    color:#d4af37;
-    cursor:pointer;
-    transition:0.3s;
-}
- 
-.social-icons i:hover{
-    color:black;
-}
- 
- 
-/* RIGHT SIDE FORM */
-.contact-form{
-    flex:1;
-    min-width:300px;
-    background:white;
-    padding:30px;
-    border-radius:8px;
-    box-shadow:0 0 15px rgba(0,0,0,0.1);
-}
- 
-.contact-form form{
-    display:flex;
-    flex-direction:column;
-}
- 
-.contact-form input,
-.contact-form textarea{
-    margin-bottom:15px;
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:5px;
-    font-size:14px;
-}
- 
-.contact-form button{
-    background:#FFD700;
-    border:none;
-    padding:14px;
-    font-size:16px;
-    font-weight:bold;
-    border-radius:5px;
-    cursor:pointer;
-    transition:0.3s;
-}
- 
-.contact-form button:hover{
-    background:#e6c200;
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction: column;
+    }
+
+    nav{
+
+        margin-top: 20px;
+    }
+
+    nav a{
+
+        display: inline-block;
+
+        margin: 10px;
+    }
+
+    .rooms-container,
+    .about-section{
+
+        flex-direction: column;
+    }
+
+    .booking-form{
+
+        width: 90%;
+    }
+
+    .hero h1{
+
+        font-size: 35px;
+
+        text-align: center;
+    }
 }
