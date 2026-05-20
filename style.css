@@ -371,6 +371,28 @@ button:hover{
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
+.feedback-section{
+
+    width: 95%;
+
+    margin: 80px auto;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.feedback-form{
+
+    width: 70%;
+
+    margin: auto;
+}
+
 footer{
 
     width: 95%;
